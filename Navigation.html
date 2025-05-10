@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 15px 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-link:hover {
+            background: #34495e;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .dashboard-header {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-area {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul class="nav-items">
+            <li class="nav-item"><a class="nav-link" href="#Home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="About Us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact Us">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Sign In">Sign In</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Login">Login</a></li>
+        </ul>
+    </div>
+
+   
+    <div class="main-content">
+        <div class="dashboard-header">
+            <h1>Welcome to the Dashboard</h1>
+        </div>
+        <div class="content-area">
+            <p>This is your dashboard where you can navigate to different sections.</p>
+        </div>
+    </div>
+
+</body>
+</html>

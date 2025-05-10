@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Hut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+ /* For headings like About, Quick Links, etc. */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif; /* Change to any font from the suggested list */
+    color: #333; /* A classic dark shade for a professional look */
+}
+
+/* For body text */
+body, p, a {
+    font-family: 'Poppins', sans-serif; /* For simple, modern body text */
+    color: #444; /* A slightly lighter dark shade */
+}
+
+/* Buttons */
+button {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #4CAF50; /* A pleasing green tone */
+}
+
+        .logo {
+            width: 120px;
+            height: auto;
+        }
+        footer {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section a {
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a:hover {
+  color: #27ae60;
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #ccc;
+}
+
+.footer-bottom a {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.header-container {
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Order Form */
+.order-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.order-section h2 {
+    text-align: center;
+    color: #f4f4f4;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #4f8851;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <img src="Millet Man (5).png" alt="Logo" class="logo"> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sign-up.html">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Slideshow and Sound -->
+    <header class="hero text-center">
+        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <video class="d-block w-100" autoplay loop controls>
+                        <source src="invideo-ai-1080 Discover Organic Hut_ Your One-Stop Shop 2024-10-06.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Welcome to Organic Hut</h1>
+                        <p>Fresh and Healthy Organic Food Delivered to Your Doorstep</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" autoplay loop controls>
+                        <source src="invideo-ai-1080 Experience the Purity of Organic Vegetar 2024-10-06.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Organic Vegetables</h1>
+                        <p>Locally Sourced and Chemical-Free</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <video class="d-block w-100" autoplay loop controls>
+                        <source src="invideo-ai-1080 Desi Street Food with an Organic Twist! 2024-10-06.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Support Local Farmers</h1>
+                        <p>Bringing the Best from Organic Farms to Your Home</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center">
+        <div class="container">
+            <h1><b>About Us</b></h1>
+            <hr>
+            <p>Our journey began with a simple yet powerful belief: the Earth provides everything we need to thrive, and by returning to its roots, we can lead healthier, happier lives. At Organic Hut, we are on a mission to bring the finest, freshest organic produce from the heart of nature directly to your table. Every item we offer is a testament to the soil, sun, and care of our dedicated local farmers, who work tirelessly to ensure that the produce is not just fresh but bursting with life.</p>
+            <p>
+                At Organic Hut, we're passionate about bringing you the freshest, most flavorful vegetarian food, inspired by the vibrant street food culture of India.
+                Our commitment to organic ingredients and sustainable practices ensures that every bite is not only delicious but also good for you and the planet.
+                Organic Goodness: Our menu features a wide variety of dishes made with carefully sourced organic produce, ensuring you receive the highest quality nutrition.
+Indian Street Food Inspiration: Experience the authentic flavors of India, reimagined for a modern palate. From classic chaats to innovative fusion creations, our menu has something to satisfy every craving.
+Vegetarian Paradise: Whether you're a seasoned vegetarian or simply looking to explore new plant-based options, our menu offers a diverse range of delicious and satisfying dishes.
+Convenience and Quality: Enjoy the convenience of online ordering and home delivery, without compromising on taste or quality.
+            </p>
+            <br>
+            <hr>
+            <h1><b>Our Mission</b></h1>
+            <br>
+            <p>Our mission is bold and unwavering: to revolutionize the food industry by offering pure,
+                 pesticide-free, organic produce that fuels your body and soul. We are not just delivering food; we are delivering vitality.
+                  Every bite you take from Organic Hut is packed with nutrients that nourish you from the inside out, helping you live your best, 
+                  healthiest life.</p>
+                  <p>
+                    Our mission is to make organic, delicious vegetarian food accessible and enjoyable for everyone. We believe that healthy eating should be a delightful experience, and we're dedicated to providing you with exceptional food that nourishes your body and soul.
+                  </p>
+                  <br>
+                  <hr>
+                  <h1><b>Our Values</b></h1>
+                  <br>
+            <p>Absolute Purity: We are committed to providing food that is as close to nature as possible. No chemicals, no shortcuts – just pure, unadulterated goodness.</p>
+            <p>Sustainability Above All: Our farms use regenerative agriculture practices that protect the land, water, and air, ensuring that future generations can enjoy the same fresh produce we offer today.</p>
+            <p>Supporting Farmers: We believe in empowering the unsung heroes of the food chain – our local farmers. By working directly with them, we ensure fair trade and uplift communities that rely on sustainable farming.</p>
+            <p>Health is Wealth: Organic Hut believes that health is the most valuable asset. When you choose our products, you're choosing to invest in your long-term well-being.</p>
+            <br>
+            <hr>
+            <h1><b>Why Organic Hut?</b></h1>
+            <br>
+            <p>Because we care. We care about your health, your family, and the future of our planet. We believe food should be free from harmful pesticides, GMOs, and chemicals – food that nature intended. By choosing Organic Hut, you’re not just choosing a meal; you’re choosing a lifestyle that values health, purity, and sustainability.</p>
+            <br>
+            <hr>
+            <h1><b>Our Vision</b></h1>
+            <br>
+            <p>We dream of a world where pure, organic food is not a luxury but a necessity. We envision a future where every family has access to food that nourishes, sustains, and inspires. Organic Hut isn’t just a business – it’s a legacy. A legacy of sustainability, health, and a return to nature’s wisdom.</p>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <h1><p>Join us on a culinary adventure and discover the joy of organic vegetarian cuisine.</p></h1>
+    </section>
+
+    
+    
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light text-center">
+        <div class="container">
+            <center><h1><b>Our Products</b></h1></center>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://thumbs.dreamstime.com/b/vibrant-display-organic-vegetables-fruits-herbs-arranged-simple-cardboard-box-surrounded-abundance-fresh-produce-319929145.jpg" class="card-img-top" alt="Organic Vegetables">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Vegetables</h5>
+                            <p class="card-text">Fresh and organic vegetables directly from farms.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://media.istockphoto.com/id/1284690585/photo/colorful-vegetables-and-fruits-vegan-food-in-rainbow-colors.jpg?s=612x612&w=0&k=20&c=fXqp_CPaHMyfzMhjZGQG1zloNBNkVRjdYKScw3K98XQ=" class="card-img-top" alt="Organic Fruits">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Fruits</h5>
+                            <p class="card-text">Sweet, juicy, and chemical-free organic fruits.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://img.freepik.com/premium-photo/fresh-organic-milk-nature-background-dairy-concept_1168123-27484.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Organic Dairy</h5>
+                            <p class="card-text">Farm-fresh organic dairy products.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/a6/f4/5b/a6f45bc1634b2f911f6b5f569ee5c5fc.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">Japanese Sweet dessert with fresh cream.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/74/4b/5f/744b5fb934f35c001fd9acc4a4ed37ab.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Cupcakes</h5>
+                            <p class="card-text">Healthier Red Velvet cupcakes.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/42/a4/8e/42a48ec49a02a83d6645e9b8d798fa85.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Chocolate Cookies</h5>
+                            <p class="card-text">A healthier version of cookies made with homemade chocolate.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Rice cake.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Rice Cake</h5>
+                            <p class="card-text">Vegetarian Korean styled spicy rice cakes.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Ice cream.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Ice Cream</h5>
+                            <p class="card-text">Fresh cream's Ice cream.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="WhatsApp Image 2024-10-08 at 14.32.32_bac7c69c.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Rasmalai</h5>
+                            <p class="card-text">Bengali Sweet dish .</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/66/d1/c8/66d1c8e4e189bf6d6ecf950e004d92ff.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Juices</h5>
+                            <p class="card-text">Healthy organic juice.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Juice.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Juices</h5>
+                            <p class="card-text">Farm-fresh organic Juices.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/b6/37/18/b63718a1c7e6a09bd8ac757c7b92e21e.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Juices</h5>
+                            <p class="card-text">Healthy and tasty drink for daily happiness.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/36/b1/e0/36b1e0001b00ff2ec6ee0a893f9651dc.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Juices</h5>
+                            <p class="card-text">Nutricious and freshly made with fruits.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/be/94/9a/be949a0a15b83f3bb834bf242d630966.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza</h5>
+                            <p class="card-text">Fresh and healthy organic Pizza.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="panipuri.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Panipuri</h5>
+                            <p class="card-text">Every Indian's favourite street food in healthier version .</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Chilli Paneer.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Chilli Panner</h5>
+                            <p class="card-text">Desi Chinese styled Chilli Panner.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Handvo.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Handvo</h5>
+                            <p class="card-text">Gujarati styled rice batter dish.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Honey chilli panner.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Honey Chilli Paneer</h5>
+                            <p class="card-text">Desi Chinese styled Honey Chilli Panner.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Palak Paneer.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Palak Paneer</h5>
+                            <p class="card-text">Punjabi styled healthier version of spinach and Paneer.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="dhokla.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Khaman Dhokla</h5>
+                            <p class="card-text">Gujarati famous dish with some fried chilli.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Mushroom Dhosa.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Mushroom Dhosa</h5>
+                            <p class="card-text">South-Indian styled Mushroom filled rice pancakes.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Dal Makhni.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Dal Makhni</h5>
+                            <p class="card-text">A healthier and creamier version of Dal.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Paneer Butter Masala.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Paneer Butter Masala</h5>
+                            <p class="card-text">Punjabi chef's touch sabji.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Paneer Makhni.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Paneer Makhni</h5>
+                            <p class="card-text">Creamier panner Makhni with a healthier touch.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="noodles.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Noodles</h5>
+                            <p class="card-text">A healthier version of chinese styled noodles.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Rajma chawal.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Rajma chawal</h5>
+                            <p class="card-text">Punjabi Dal with lots of proteins.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Undhiyu.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Undhiyu</h5>
+                            <p class="card-text">Gujarati touch to fresh vegetables.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Rice.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Fried Rice</h5>
+                            <p class="card-text">A healthier version of Chinese styled Rice.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Salad 1.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Sneaky Salad</h5>
+                            <p class="card-text">Fresh vegetables salad.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Salad 2.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Farm Fresh Salad</h5>
+                            <p class="card-text">Farm Fresh vegetables salad.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Sambhar.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                             <h5 class="card-title">Sambhar</h5>
+                             <p class="card-text">South-Indian touch to Dal.</p>
+                             <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="smoothie.jpg" class="card-img-top" alt="Organic Dairy">
+                        <div class="card-body">
+                            <h5 class="card-title">Smoothie</h5>
+                            <p class="card-text">Healthy Smoothie with rich nutrients.</p>
+                            <p class="price">$19.99</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="soup.jpg" class="card-img-top" alt="Organic Dairy">
+                            <div class="card-body">
+                                <h5 class="card-title">Corn Soup </h5>
+                                <p class="card-text">Hot Corn Soup for Winter season.</p>
+                                <p class="price">$19.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <hr>
+    <section id="order" class="order py-5 text-center">
+
+        <div class="container">
+            <center><h1><b>Order Now</b></h1></center>
+            <h2>Place Your Order</h2>
+            <form id="order-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="product">Select Product:</label>
+                <select id="product" name="product">
+                    <option value="organic-apples">Organic Vegetables</option>
+                    <option value="organic-milk">Organic Fruits
+                    </option>
+                    <option value="organic-honey">Organic Dairy 
+                    </option>
+                    <option value="organic-bread">Tiramisu</option>
+                    <option value="organic-milk">Cupcakes</option>
+                    <option value="organic-milk">Chocolate Cookies
+                    </option>
+                    <option value="organic-milk">Rice cake
+                    </option>
+                    <option value="organic-milk">Ice Cream
+                    </option>
+                    <option value="organic-milk">Rasmalai</option>
+                    <option value="organic-milk">Jucies-1
+                    </option>
+                    <option value="organic-milk">Juices-2
+                    </option>
+                    <option value="organic-milk">Juices-3
+                    </option>
+                    <option value="organic-milk">Juices-4
+                    </option>
+                    <option value="organic-milk">Pizza
+                    </option>
+                    <option value="organic-milk">Panipuri
+                    </option>
+                    <option value="organic-milk">Chilli Panner
+                    </option>
+                    <option value="organic-milk">Handvo</option>
+                    <option value="organic-milk">Honey Chilli Panner
+                    </option>
+                    <option value="organic-milk">Palak Paneer 
+                    </option>
+                    <option value="organic-milk">Khaman Dhokla
+                    </option>
+                    <option value="organic-milk">Mushroom Dhosa
+                    </option>
+                    <option value="organic-milk">Dal Makhni
+                    </option>
+                    <option value="organic-milk">Paneer Butter Masala
+                    </option>
+                    <option value="organic-milk">Paneer Makhni
+                    </option>
+                    <option value="organic-milk">Noodles
+                    </option>
+                    <option value="organic-milk">Rajma Chawal 
+                    </option>
+                    <option value="organic-milk">Undhiyu
+                    </option>
+                    <option value="organic-milk">Fried Rice
+                    </option>
+                    <option value="organic-milk">Sneaky Salad
+                    </option>
+                    <option value="organic-milk">Farm Fresh Salad
+                    </option>
+                    <option value="organic-milk">Sambhar
+                    </option>
+                    <option value="organic-milk">Smoothie
+                    </option>
+                    <option value="organic-milk">Corn Soup
+                    </option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="date">Preferred Delivery Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions"></textarea>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 text-center">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Reach out to us for any queries or orders.</p>
+            <p>Email: info@organichut.com | Phone: +123 456 7890</p>
+        </div>
+    </section>
+   
+    <footer>
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h3>About Organic Hut</h3>
+              <p>
+                Organic Hut is dedicated to providing fresh, organic, and high-quality food items directly to your doorstep. Our goal is to promote a healthy lifestyle with natural products.
+              </p>
+            </div>
+            <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section contact">
+              <h3>Contact Us</h3>
+              <p>Email: support@organichut.com</p>
+              <p>Phone: +123-456-7890</p>
+              <p>Address: 123 Greenway Blvd, Organic Town</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            &copy; 2024 Organic Hut | Designed with care
+          </div>
+        </div>
+      </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

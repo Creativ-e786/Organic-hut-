@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Organic Hut</title>
+   <style>
+    /* Styles for Header */
+.header-container {
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.header-container h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for Order Form */
+.order-section {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.order-section h2 {
+    text-align: center;
+    color: #f4f4f4;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f4f4f4;
+}
+
+/* Styles for Footer */
+.footer-container {
+    background-color: #f4f4f4;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    color: #f4f4f4;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+   </style>
+</head>
+<body>
+    <!-- Original Website Header -->
+    <header>
+        <div class="header-container">
+            <h1>Organic Hut</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Form Section -->
+    <section class="order-section">
+        <div class="container">
+            <h2>Place Your Order</h2>
+            <form id="order-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="product">Select Product:</label>
+                <select id="product" name="product">
+                    <option value="organic-apples">Organic Apples</option>
+                    <option value="organic-milk">Organic Milk</option>
+                    <option value="organic-honey">Organic Honey</option>
+                    <option value="organic-bread">Organic Bread</option>
+                </select>
+
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="date">Preferred Delivery Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions"></textarea>
+
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Original Website Footer -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-section about">
+              <h3>About Organic Hut</h3>
+              <p>
+                Organic Hut is dedicated to providing fresh, organic, and high-quality food items directly to your doorstep. Our goal is to promote a healthy lifestyle with natural products.
+              </p>
+            </div>
+            <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="footer-section contact">
+              <h3>Contact Us</h3>
+              <p>Email: support@organichut.com</p>
+              <p>Phone: +123-456-7890</p>
+              <p>Address: 123 Greenway Blvd, Organic Town</p>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            &copy; 2024 Organic Hut | Designed with care
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const product = document.getElementById('product').value;
+    const quantity = document.getElementById('quantity').value;
+    const payment = document.getElementById('payment').value;
+
+    // Simple confirmation message
+    alert(`Thank you for your order, ${name}! You have ordered ${quantity} unit(s) of ${product}.`);
+    
+    // In a real-world scenario, you'd send the form data to a server here.
+});
+
+    </script>
+</body>
+</html>
